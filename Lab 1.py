@@ -1,16 +1,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.linspace(-1, 1, 10)
-y = np.linspace(-1, 1, 10)
+x = np.linspace(-2, 2, 17)
+y = np.linspace(-2, 2, 17)
 xx, yy = np.meshgrid(x,y)
 
-g = xx
-h = yy
+g = yy+xx
+h = 1
+e=np.e
+yp = (-x -1 + (e*e**(x)/3))
 
-# yp = np.sqrt(x*x)
-
-plt.plot(x)
+plt.plot(x,yp)
 plt.quiver(xx, yy, h, g)
-
+plt.ylim(-2,2)
 plt.show()
